@@ -51,6 +51,11 @@
 
 ?>
 <body>
+ <?php 
+ $voto = $_GET["vote"] ?? 0;
+ 
+ ?>
+
 
 <table class="table">
   <thead>
@@ -66,17 +71,19 @@
   <?php 
     
     foreach ($hotels as $hotel){
-        
+       if($voto  <= $hotel["vote"]){
       echo  "<tr><td>".$hotel['name']."</td>";
       echo  "<td>".$hotel['description']."</td>";
       echo  "<td>".$hotel['parking']."</td>";
       echo  "<td>".$hotel['vote']."</td>";
       echo  "<td>".$hotel['distance_to_center']."</td></tr>";
-    }
+       } 
+     
+    } 
     ?>
   </tbody>
 </table>
-  
+  <a href="ricerca.php">Return to search</a>
     
 </body>
 </html>
