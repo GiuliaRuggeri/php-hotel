@@ -52,14 +52,31 @@
 ?>
 <body>
 
-<ul>
-    <?php 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Parking</th>
+      <th scope="col">Vote</th>
+      <th scope="col">Distance to center</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php 
+    
     foreach ($hotels as $hotel){
         
-        echo "<li>".$hotel['name']."</li>";
+      echo  "<tr><td>".$hotel['name']."</td>";
+      echo  "<td>".$hotel['description']."</td>";
+      echo  "<td>".$hotel['parking']."</td>";
+      echo  "<td>".$hotel['vote']."</td>";
+      echo  "<td>".$hotel['distance_to_center']."</td></tr>";
     }
     ?>
-</ul>
+  </tbody>
+</table>
+  
     
 </body>
 </html>
