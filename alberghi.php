@@ -54,6 +54,7 @@
  <?php 
  $voto = $_GET["vote"] ?? 0;
  
+ 
  ?>
 
 
@@ -71,7 +72,7 @@
   <?php 
     
     foreach ($hotels as $hotel){
-       if($voto  <= $hotel["vote"]){
+       if($voto  <= $hotel["vote"]  ){
       echo  "<tr><td>".$hotel['name']."</td>";
       echo  "<td>".$hotel['description']."</td>";
       echo  "<td>".$hotel['parking']."</td>";
